@@ -1,0 +1,33 @@
+extends layout
+
+block content
+    h1(class="title") Admin
+
+
+    ul(class='slist' id='sneakerlist')
+        each sneaker in sneakers
+            li(id="sneaker" + sneaker._id)
+                img(src=`${sneaker.url}` class = "image" )
+                p #{sneaker.name}
+                p #{sneaker.date}
+                p #{sneaker.info}
+
+                div(class = 'div')
+                    //if(movie.trending == true)
+                    //    img(src='/images/star.svg' class= 'star')
+                    //    br
+
+                    input(type="button" onclick="deleteSneaker(" + sneaker._id + ")" value="Delete" class = 'admin_button')
+                    input(type="button" onclick="moveToEdit(" + sneaker._id + ")" value="Edit" class = 'admin_button')
+
+                    //input(type="button" onclick="ajaxDelete(" + movie._id + ")" value="Delete By Ajax" class = 'admin_button')
+                    //if(movie.trending == false)
+                    //    input(type="button" onclick="updateTrendOn(" + movie._id + ")" value="Trending On" class = 'admin_button')
+                    //else if(movie.trending == true)
+                    //    input(type="button" onclick="updateTrendOff(" + movie._id + ")" value="Trending Off" class = 'admin_button')
+
+
+
+
+                p --------------------------------------------------------------------------------
+                br

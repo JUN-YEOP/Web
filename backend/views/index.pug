@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1(class="title") Sneakers
+  ul(class='slist')
+    each sneaker in sneakers
+      li
+      img(src=`${sneaker.url}` class = "image" )
+      p #{sneaker.name}
+      p #{sneaker.date}
+      p #{sneaker.info}

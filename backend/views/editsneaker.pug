@@ -1,0 +1,26 @@
+extends layout
+
+
+block content
+
+    h1(class="title") Edit Sneaker
+
+    form(action = "/routes/sneaker/update/"+sneaker._id+"" method="POST"  name = "form" class="form")
+        label Name
+        br
+        input(id='edit_name' type='text' name = 'name' value= sneaker.name)
+        br
+        br
+
+        label Date
+        br
+        input(id='edit_date' type='text' name = 'date' value = sneaker.date)
+        br
+        br
+
+        label Image Path
+        br
+        input(id='edit_url' type='text' name = 'url' value = sneaker.url)
+        br
+        br
+        button(type="submit" class = "button") Edit Sneaker

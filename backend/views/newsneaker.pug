@@ -1,0 +1,27 @@
+extends layout
+
+block content
+
+    h1(class="title") Add Sneaker
+
+    form(action = "/routes/sneaker/create" method="POST"  name = "form" class="form")
+        label Name
+        br
+        input(type='text' name = 'name')
+        br
+        br
+
+
+        label Date
+        br
+        input(type='text' name = 'date' placeholder='YYYY-MM-DD')
+        br
+        br
+
+
+        label Image Path
+        br
+        input(type='text' name = 'url')
+        br
+        br
+        button(type="submit" class = "button") Add Sneaker
